@@ -1,0 +1,41 @@
+body { 
+    background-color: black;
+    color:white;
+}
+
+input {
+    margin:5px;
+    height:2em;
+    width:15em;
+    padding-left:10px;
+    padding-right:10px; 
+}
+
+button {
+    width:300px;
+    height:75px;
+    font-size: 2em;
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 3%;
+    display:block;
+}
+
+.section1, .section2, .section3 {
+    text-align: center;
+}
+
+.section1 {
+    margin-top:3%;
+}
+
+p {
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:3%;
+}
+
+h1 {
+    text-align: center;
+    font-size:3em;
+}
