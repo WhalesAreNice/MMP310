@@ -3,13 +3,18 @@ body {
     color:white;
 }
 
+p {
+    font-size:1.5em;
+    text-align: center;
+}
+
 select {
     width:70px;
     height:40px;
     font-size:1.5em;
 }
 
-button {
+.number {
     width:50px;
     height:30px;
     font-size:1.2em;
