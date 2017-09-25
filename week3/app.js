@@ -13,8 +13,6 @@ var wrong3 = document.getElementsByClassName("wrong3");
 var message3 = document.getElementById("message3");
 var point3 = 0;
 
-var points = point1 + point2 + point3;
-
 
 answer1.onclick = function() {
     point1 = 1;
@@ -52,7 +50,8 @@ for (let i=0; i < wrong3.length; i++) {
 submit.onclick = function() {
 	var submit = document.getElementById("submit");
     
-   
+   var points = point1 + point2 + point3;
+    
 	var message = document.getElementById("message");
     
     message.innerText = "You've gotten " + points + " out of 3 correct, your score is " + 100/3*points;
