@@ -16,7 +16,7 @@ submit.onclick = function() {
     setTimeout(function(){ 
         document.getElementById("8ball").style.display="none";
         message.innerText = question.value + "\n\n" + magic; 
-    }, 1700);
+    }, 3570);
     
     
     
