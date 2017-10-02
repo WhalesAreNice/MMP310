@@ -1,5 +1,30 @@
-click1.onclick = function() {
+    theclick1();
+    theclick2();
+    theclick3();
+    theclick4();
+    theclick5();
+
+click1.onclick = function() {   
+    theclick1();   
+};    
+
+click2.onclick = function() {   
+    theclick2(); 
+};    
+
+click3.onclick = function() {   
+    theclick3();  
+};    
+
+click4.onclick = function() {  
+    theclick4();   
+};    
+
+click5.onclick = function() {  
+     theclick5(); 
+};    
     
+function theclick1 () {
     var click1 = document.getElementById("click1")
     
     var message1 = ["an object","an interaction","a website","a service","an image","an app","an experience","an installation","a technology","a brand","a concept","a book"];
@@ -8,12 +33,10 @@ click1.onclick = function() {
     
     var display1 = message1[Math.floor(Math.random() * message1.length)];
     
-    answer1.innerText = display1; 
-    
-};    
+    answer1.innerText = display1;  
+}
 
-click2.onclick = function() {
-    
+function theclick2() {
     var click2 = document.getElementById("click2")
     
     var message2 = ["circles","African fashion","squares","dots", "furniture", "cameras","natural materials","senior citizens","Eastern medicine","guns","healthcare","curves"];
@@ -22,12 +45,10 @@ click2.onclick = function() {
     
     var display2 = message2[Math.floor(Math.random() * message2.length)];
     
-    answer2.innerText = display2; 
-    
-};    
+    answer2.innerText = display2;  
+}
 
-click3.onclick = function() {
-    
+function theclick3() {
     var click3 = document.getElementById("click3")
     
     var message3 = ["trusting","chaotic","approachable","discrete","tactical","collaborative","immersive","a family","paradigm shifting","overlapping","contrasting","responsive"];
@@ -37,11 +58,9 @@ click3.onclick = function() {
     var display3 = message3[Math.floor(Math.random() * message3.length)];
     
     answer3.innerText = display3; 
-    
-};    
+}
 
-click4.onclick = function() {
-    
+function theclick4() {
     var click4 = document.getElementById("click4")
     
     var message4 = ["forms","brand touchpoints","patterns","wireframes","textures","materials","VR simulations","hardware hacks","concept sketches","personas","buttons","layouts"];
@@ -50,12 +69,10 @@ click4.onclick = function() {
     
     var display4 = message4[Math.floor(Math.random() * message4.length)];
     
-    answer4.innerText = display4; 
-    
-};    
+    answer4.innerText = display4;
+}
 
-click5.onclick = function() {
-    
+function theclick5() {
     var click5 = document.getElementById("click5")
     
     var message5 = ["fabric","pen \u0026 paper","paint","collage","video","code","card \u0026 tape","pipe cleaners","existing objects","CAD","Photoshop","Excel"];
@@ -64,8 +81,5 @@ click5.onclick = function() {
     
     var display5 = message5[Math.floor(Math.random() * message5.length)];
     
-    answer5.innerText = display5; 
-    
-};    
-    
-
+    answer5.innerText = display5;  
+}
