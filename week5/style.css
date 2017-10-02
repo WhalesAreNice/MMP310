@@ -45,3 +45,42 @@ h1 {
     text-align: center;
     font-size:3em;
 }
+
+.inline {
+    display:block;
+}
+
+.float {
+    width:100px;
+    text-align:left;
+    display:inline;
+    margin:0;
+}
+
+#click1, #click2, #click3, #click4, #click5 {
+    font-size:2em;
+    text-decoration: none;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.answers {
+    font-size:2.5em;
+}
+
+#answer1 {
+    color:lightblue;
+}
+
+#answer2 {
+    color:lightgreen;
+}
+#answer3 {
+    color:mediumpurple;
+}
+#answer4 {
+    color:orange;
+}
+#answer5 {
+    color:yellow;
+}
