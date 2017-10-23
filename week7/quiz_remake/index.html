@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quiz remake</h1>
+    <div class="section1">
+       <p>What is x in the equation: 2(40+x)=200</p>
+       <button class="number" id="60">60</button>
+       <button class="wrong1 number">80</button>
+       <button class="wrong1 number">100</button>
+       <button class="wrong1 number">120</button>
+       <p id="message1"></p>
+    </div>
+    <div class="section2">
+       <p>Click on the picture of a dog.</p>
+       
+       <button class="wrong2"><img src="images/cat.jpg"></button>
+       <button class="wrong2"><img src="images/walrus.jpg"></button>
+       <button id="dog"><img id="dog1" src="images/dog.jpg"></button>
+       <button class="wrong2"><img src="images/monkey.jpg"></button>
+       <p id="message2"></p>
+    </div>
+    <div class="section3">
+       <p>How many oceans are there?</p>
+       <button class="wrong3 number">3</button>
+       <button class="number" id="five">5</button>
+       <button class="wrong3 number">6</button>
+       <button class="wrong3 number">2</button>
+       <p id="message3"></p>
+    </div>
+    
+    <button id="submit">Click Me</button>
+    <p id="message"></p>
+    <script src="app.js"></script>
+</body>
+</html>
