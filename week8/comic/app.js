@@ -37,22 +37,34 @@ var comics = [
 
 var c = document.querySelector("#container");
 var comicElem = document.createElement("div");
-comicElem.className = "message";
+comicElem.className = "slides";
 var img = new Image();
 var title = document.createElement("h2");
-img.src = comics.image;
-title.textContent = comics.title;
+var num = 0;
+img.src = comics[num].image;
+title.textContent = comics[num].title;
 
 comicElem.appendChild(img);
 comicElem.appendChild(title);
 document.body.appendChild(comicElem);
 
+var next = document.getElementById("next");
+var back = document.getElementById("back");
 
-$(document).ready(function() {
-  // for multiple references use a variable, often the convention is to use $ in var name to indicate it's a jQuery object, not HTML element reference, has no functional purpose
-  var $mydiv = $('#mydiv');
-  $('#btn').click(function() {
-    console.log($mydiv.html());
-    $mydiv.text('Goodbye world!');
-  });
-});
+next.onclick = function() {
+    if (num < comics.length) {
+        num++;
+        img.src = comics[num].image;
+        title.textContent = comics[num].title;
+    }
+}
+
+back.onclick = function() {
+    if (num > 0) {
+        num--;
+        img.src = comics[num].image;
+        title.textContent = comics[num].title
+    }
+}
+
+
