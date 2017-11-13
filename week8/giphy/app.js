@@ -5,11 +5,8 @@ $(document).ready(function() {
 			var query = this.value;
 			var key = "uTtk10NFnmdtYP4f3URNps6BFeFqh1Jq";
 			var url = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=6";
-<<<<<<< HEAD
             var matchNum = 0;
             var clickNum = 0;
-=======
->>>>>>> 54d25423fac2857997e02ed1dcbba6760bbad9c3
 			$.getJSON(url, function(json) {
 				
 				/* memory game */
@@ -43,15 +40,12 @@ $(document).ready(function() {
 				// each card/image needs clicks event
 				$('.card').click(function() {
 					const $card = $(this);
-<<<<<<< HEAD
                     clickNum ++;
 //                    console.log(clickNum, matchNum);
 					// reveal images
 					$card.children().show();
 					// is there another image to compare
 //					console.log(clickedCards.length, matches);
-=======
->>>>>>> 54d25423fac2857997e02ed1dcbba6760bbad9c3
 					// reveal images
 					$card.children().show();
 					// is there another image to compare
@@ -67,10 +61,7 @@ $(document).ready(function() {
 						if (allMatch) {
 							// match, stay face up
 							console.log("this is a match");
-<<<<<<< HEAD
                             matchNum ++;
-=======
->>>>>>> 54d25423fac2857997e02ed1dcbba6760bbad9c3
 							// if all matches game is won
 						} else {
 							// not a match, hide the images
@@ -88,18 +79,14 @@ $(document).ready(function() {
 							img: $card.find('img')
 						});
 					}
-<<<<<<< HEAD
                     if(matchNum == 6) {
                         addMessage(clickNum);
                     }
-=======
->>>>>>> 54d25423fac2857997e02ed1dcbba6760bbad9c3
 				});
 					
 			});
 		}
 	});
-<<<<<<< HEAD
 });
 
 function addMessage(clicks) {
@@ -113,6 +100,3 @@ function addMessage(clicks) {
     
 		endScreen.appendChild(msg);
 }
-=======
-});
->>>>>>> 54d25423fac2857997e02ed1dcbba6760bbad9c3
