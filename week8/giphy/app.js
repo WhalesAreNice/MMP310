@@ -1,3 +1,17 @@
+var count = 5;
+var countdown = function(card) {
+    if (count == 0) {
+        card.children().hide(0);
+        count = 5;
+        clearInterval(countdownInterval);
+                        }
+    console.log(count);
+     count--;
+    };
+
+var countdownInterval;
+
+
 $(document).ready(function() {
 	$('#query').on("keypress", function(event){
 		/* keyCode 13 is the enter key to submit query */
@@ -39,18 +53,27 @@ $(document).ready(function() {
 				var clickedCards = [];
 				// each card/image needs clicks event
 				$('.card').click(function() {
+                    
+                
+                    
 					const $card = $(this);
+                    
+                   
                     clickNum ++;
 //                    console.log(clickNum, matchNum);
 					// reveal images
-					$card.children().show();
+                    
+                    
 					// is there another image to compare
 //					console.log(clickedCards.length, matches);
 					// reveal images
+                    
+                    
 					$card.children().show();
+                    
 					// is there another image to compare
-					console.log(clickedCards.length, matches);
 					if (clickedCards.length == matches - 1) {
+                        console.log(clickedCards[0].num, $card.data().num);
 						// compare images
 						var allMatch = true;
 						for (let i = 0; i < clickedCards.length; i++) {
@@ -62,6 +85,7 @@ $(document).ready(function() {
 							// match, stay face up
 							console.log("this is a match");
                             matchNum ++;
+                            
 							// if all matches game is won
 						} else {
 							// not a match, hide the images
@@ -70,15 +94,23 @@ $(document).ready(function() {
 								clickedCards[i].img.delay(1000).hide(0);
 							}
 						}
+                        clearInterval(countdownInterval);
+                        count = 5;
 						// clear the current image
 						clickedCards = [];
 					} else {
+                        countdownInterval = setInterval(function(){
+                            countdown($card);
+                        }, 1000);
 						// keep track of current image
 						clickedCards.push({
 							num: $card.data().num,
 							img: $card.find('img')
 						});
 					}
+                    
+                    
+                    
                     if(matchNum == 6) {
                         addMessage(clickNum);
                     }
