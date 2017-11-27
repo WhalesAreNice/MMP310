@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Currency Exchange and Crypto-currency</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div id="container">
+                <h1>Choose the type of currency you want to convert from and the amount</h1>
+                <p>Your Currency type</p>
+                <select type="text" id="query1" placeholder="search currency">
+                    <option value="USD">United States Dollar</option>
+                    <option value="EUR">Euro</option>
+                </select>
+                <input type="text" id ="amount" placeholder="Amount">
+                <p>Currency type to convert to</p>
+                <select type="text" id="query2" placeholder="search currency">
+                    <option value="USD">United States Dollar</option>
+                    <option value="EUR">Euro</option>
+                </select>
+                <button id="start">Start</button>
+                <div id="exchange"></div>
+                <table id="crypto"></table>
+                
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="app.js"></script>
+        </body>
+    </html>
