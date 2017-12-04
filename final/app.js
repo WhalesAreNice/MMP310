@@ -2,8 +2,15 @@
 //https://currencylayer.com/documentation
 
 var change = 0;
+var table = document.getElementById("crypto");
+var exchange = document.getElementById("exchange");
 $(document).ready(function(){
     $("#start").click(function(){
+        
+        table.innerHTML = "";
+        exchange.innerHTML = "";
+        
+        
         var key1 = "50bc5ff202bf95fc2bbd19cb25b01bf9";
         var url1 = "http://www.apilayer.net/api/live?access_key=" + key1;
         
@@ -20,7 +27,6 @@ $(document).ready(function(){
             addMessage(change);
             
             
-            
             $.getJSON(url2, function(data){
                 console.log(data);
                 for(let i = 0; i < data.length; i++) {
@@ -29,24 +35,43 @@ $(document).ready(function(){
                     let crypto_conversion = amount/json.quotes["USD"+first_cur]/data[i].price_usd;
                     addTable(name, price, crypto_conversion);
                 }
+                addTable("currency", "Current Crypto Value (USD)", "Conversion");
             });
+            
         });
         
         
     })
+    
+    
 })
 
-function addTable(name, price, crypto_conversion){
+
+
+function addTable(name, price, conversion){
+   
+    var header = table.createTHead();
+    var row = header.insertRow(0);
+    var conversions = row.insertCell(0);
+    var prices = row.insertCell(0);
+    var names = row.insertCell(0);
+    
+    if (typeof conversion === "number") {
+        conversion = conversion.toFixed(3);
+    }
+    conversions.textContent = conversion;
+    prices.textContent = price;
+    names.textContent = name;
+    
     
 }
 
 function addMessage(change){
-    var exchange = document.getElementById("exchange");
     var msg = document.createElement("div");
     var text = document.createElement("p");
     
     msg.className = "message";
-    text.innerText = "Your amount of " + $("#query1 option:selected").text() + "(s) " + document.getElementById("amount").value + " converts to " + change + " " + $("#query2 option:selected").text() + "(s)";
+    text.innerText = "Your amount of " + $("#query1 option:selected").text() + "(s) " + document.getElementById("amount").value + " converts to " + change.toFixed(3) + " " + $("#query2 option:selected").text() + "(s)";
     text.className = "text";
     msg.appendChild(text);
     exchange.appendChild(msg);
