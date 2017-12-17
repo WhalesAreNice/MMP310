@@ -29,13 +29,13 @@ $(document).ready(function(){
             
             $.getJSON(url2, function(data){
                 console.log(data);
-                for(let i = 0; i < data.length; i++) {
+                for(let i = data.length - 1; i >= 0; i--) {
                     let name = data[i].name;
                     let price = data[i].price_usd*json.quotes["USD"+first_cur];
                     let crypto_conversion = amount/json.quotes["USD"+first_cur]/data[i].price_usd;
                     addTable(name, price, crypto_conversion);
                 }
-                addTable("currency", "Current Crypto Value (USD)", "Conversion");
+                addTable("Currency", "Current Crypto Value (USD)", "Conversion");
             });
             
         });
@@ -71,7 +71,7 @@ function addMessage(change){
     var text = document.createElement("p");
     
     msg.className = "message";
-    text.innerText = "Your amount of " + $("#query1 option:selected").text() + "(s) " + document.getElementById("amount").value + " converts to " + change.toFixed(3) + " " + $("#query2 option:selected").text() + "(s)";
+    text.innerText = "Your amount of " + $("#query1 option:selected").text() + "(s) " + document.getElementById("amount").value + " converts to " + change.toFixed(3) + " " + $("#query2 option:selected").text() + "(s).";
     text.className = "text";
     msg.appendChild(text);
     exchange.appendChild(msg);

@@ -1,0 +1,57 @@
+body {
+    background-color:#e5e5e5;
+}
+
+
+#container {
+    margin-left:5%;
+    margin-right:5%;
+    background-color:white;
+    padding-left:2%;
+    padding-right:2%;
+    border:1px solid black;
+}
+
+h1 {
+    padding-bottom:30px;
+    border-bottom:2px black solid;
+}
+
+p {
+    font-size:1.2em;
+}
+
+table {
+    border-top:1px black solid;
+    border-left:1px black solid;
+    border-spacing:0px;
+    margin-top:25px;
+}
+
+td {
+    font-size:1.1em;
+    border-bottom:1px black solid;
+    border-right:1px black solid;
+    margin:0;
+    padding:5px;
+}
+
+footer {
+    margin-top:25px;
+    border-top:2px black solid;
+    margin-bottom:10px;
+    padding-bottom:0;
+}
+
+button {
+    margin-bottom:10px;
+    font-size:1em;
+}
+
+select {
+    font-size:1.1em;
+}
+
+input {
+    font-size:1em;
+}
