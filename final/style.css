@@ -4,12 +4,13 @@ body {
 
 
 #container {
-    margin-left:5%;
-    margin-right:5%;
+    margin:0 auto;
     background-color:white;
     padding-left:2%;
     padding-right:2%;
     border:1px solid black;
+    max-width:800px;
+    
 }
 
 h1 {
