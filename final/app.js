@@ -31,7 +31,7 @@ $(document).ready(function(){
                 console.log(data);
                 for(let i = data.length - 1; i >= 0; i--) {
                     let name = data[i].name;
-                    let price = data[i].price_usd*json.quotes["USD"+first_cur];
+                    let price = data[i].price_usd;
                     let crypto_conversion = amount/json.quotes["USD"+first_cur]/data[i].price_usd;
                     addTable(name, price, crypto_conversion);
                 }
